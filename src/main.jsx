@@ -7,7 +7,7 @@ import './index.css'
 import { ScrollToTop } from './components'
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { CartProvider } from './context/cartContext.jsx'
+import { CartProvider } from './context/CartContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
