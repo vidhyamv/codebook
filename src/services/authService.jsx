@@ -54,6 +54,12 @@ export async function registerData(authDetails) {
     return;
   }
   console.log(data);
+  if (data.accessToken) {
+    const decoded = jwtDecode(data.accessToken);
+    sessionStorage.setItem("token", data.accessToken);
+    sessionStorage.setItem("userId", decoded.sub);
+    // sessionStorage.setItem("cbid", JSON.stringify(response.user.id));
+  }
   return data;
 }
 
