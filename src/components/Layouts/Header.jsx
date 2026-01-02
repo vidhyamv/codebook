@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import Search from '../Sections/Search';
 import DropdownLoggedout from './../Elements/DropdownLoggedout'
 import DropdownLoggedIn from '../Elements/DropdownLoggedIn';
-import { useCart } from '../../context/cartContext';
+import { useCart } from '../../context/CartContext';
 
 export default function Header() {
 
