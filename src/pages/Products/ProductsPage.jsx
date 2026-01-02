@@ -20,7 +20,8 @@ export default function ProductsPage() {
 
   useTitle('Explore eBook Collection');
 
-  const {products, loading, error} = useFetch(`${import.meta.env.VITE_API_URL}/products${searchTerm ? "?name_like="+searchTerm : ""}`);
+  // const {products, loading, error} = useFetch(`${import.meta.env.VITE_API_URL}/444/products${searchTerm ? "?name_like="+searchTerm : ""}`);
+  const {products, loading, error} = useFetch(`${import.meta.env.VITE_API_URL}/api/products${searchTerm ? "?name_like="+searchTerm : ""}`);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;

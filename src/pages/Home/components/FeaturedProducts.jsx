@@ -3,7 +3,8 @@ import useFetch from '../../../hooks/useFetch';
 
 export default function FeaturedProducts() {
   
-  const {products, loading, error} = useFetch(`${import.meta.env.VITE_API_URL}/featured_products`);
+  // const {products, loading, error} = useFetch(`${import.meta.env.VITE_API_URL}/444/featured_products`);
+  const {products, loading, error} = useFetch(`${import.meta.env.VITE_API_URL}/api/featured_products`); //netlify
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;

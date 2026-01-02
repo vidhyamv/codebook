@@ -6,7 +6,8 @@ function getSession() {
 
 export async function getUser() {
   const session = getSession();
-  const response = await fetch(`${import.meta.env.VITE_API_URL}/users/${session.userID}`,
+  // const response = await fetch(`${import.meta.env.VITE_API_URL}/600/users/${session.userID}`,
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/api/users/${session.userID}`,
   {
     method: "GET",
     headers: {"Content-Type": "application/json", Authorization: `Bearer ${session.token}`}
@@ -28,14 +29,16 @@ export async function createOrder(orderDetail) {
     headers: {"content-Type": "application/json", Authorization: `Bearer ${session.token}`},
     body: JSON.stringify(orderDetail)
   }
-  const response = await fetch(`${import.meta.env.VITE_API_URL}/orders`,header);
+  // const response = await fetch(`${import.meta.env.VITE_API_URL}/660/orders`,header);
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders`,header);
   const data = await response.json();
   return data
 }
 
 export async function getUserOrder() {
   const session = getSession();
-  const response = await fetch(`${import.meta.env.VITE_API_URL}/orders?user.id=${session.userID}`,
+  // const response = await fetch(`${import.meta.env.VITE_API_URL}/660/orders?user.id=${session.userID}`,
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders?user.id=${session.userID}`,
   {
     method: "GET",
     headers: {"Content-Type": "application/json", Authorization: `Bearer ${session.token}`}

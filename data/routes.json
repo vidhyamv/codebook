@@ -1,4 +1,6 @@
 {
-  "/users*": "/600/users$1",
-  "/orders*": "/660/orders$1"
+    "/products*": "/444/",
+    "/featured_products*": "/444/",
+    "/orders*": "/660/",
+    "/users*": "/600/"
 }
